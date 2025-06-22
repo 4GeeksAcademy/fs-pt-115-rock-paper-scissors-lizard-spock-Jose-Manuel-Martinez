@@ -1,5 +1,158 @@
-@import "bootstrap/dist/css/bootstrap.min.css";
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    min-height: 900px;
+    
+    /* fondo animado */
+    background: linear-gradient(-45deg, #370665, #A31F34, #E94560, #F86F03);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
 
-body{
-    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+/* Keyframes Mueve la posición del fondo */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+.glass-container {
+    width: 700px;
+    padding: 40px 30px;
+    text-align: center;
+    color: white; 
+    
+    background: rgba(0, 0, 0, 0.15); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.play-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 40px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #1a1a1a; 
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.boton-opcion {
+    padding: 12px 24px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    background: rgba(255, 255, 255, 0.15); 
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+
+#boton-reiniciar {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 40px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #1a1a1a; 
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.play-button:hover {
+    background-color: white;
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px 0 rgba(255, 255, 255, 0.3);
+}
+
+#boton-reiniciar:hover {
+    background-color: white;
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px 0 rgba(255, 255, 255, 0.3);
+}
+
+
+.opciones-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+    gap: 15px; 
+    margin-top: 25px;
+}
+
+.boton-opcion:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-3px);
+}
+
+.resultados-container {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.resultados-container h2 {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.resultados-container h3 {
+    font-size: 32px;
+    margin: 10px 0;
+}
+
+/* Colores de resultado  */
+#texto-resultado-final.ganaste { color: #00d1ff; } 
+#texto-resultado-final.perdiste { color: #ff5252; } 
+#texto-resultado-final.empate { color: #fdeff9; }
+
+/* He usado todo esto para poder realizar el css así */
+/* MDN Web Docs (Mozilla Developer Network)
+
+    https://developer.mozilla.org/es/docs/Web/CSS/linear-gradient
+    https://developer.mozilla.org/es/docs/Web/CSS/animation
+    https://developer.mozilla.org/es/docs/Web/CSS/@keyframes
+    https://developer.mozilla.org/es/docs/Web/CSS/background-size
+    https://developer.mozilla.org/es/docs/Web/CSS/background-position
+    https://css-tricks.com/animated-css-backgrounds/
+
+*/
